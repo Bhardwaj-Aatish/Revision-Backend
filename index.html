@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+    <div>hello there</div>
+    <script>
+        async function sendRequest() {
+            const response = await fetch('http://localhost:3001/', {
+                method: 'GET',
+                credentials: 'include'
+            });
+        }
+        sendRequest();
+
+        async function axiosRequest() {
+            const response = await axios.get('http://localhost:3001/', {
+                withCredentials: true
+            })
+            console.log("working axios Request", response.data);
+        }
+        axiosRequest();
+
+    </script>
+</body>
+</html>
