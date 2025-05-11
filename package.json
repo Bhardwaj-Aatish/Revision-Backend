@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node index.js",
-    "start": "node index2.js"
+    "start": "node index2.js",
+    "auth" : "node auth.js"
   },
   "keywords": [],
   "author": "",
